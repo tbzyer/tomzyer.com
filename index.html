@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tom Zyer – Music</title>
+  <title>Tom Zyer</title>
 
   <!-- Google Fonts for modern typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -13,175 +12,175 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f0f0f0, #ffffff);
-      margin: 0;
-      padding: 0;
-    }
+	body {
+	  font-family: 'Inter', sans-serif;
+	  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+	  margin: 0;
+	  padding: 0;
+	}
 
-    .navbar {
-      background-color: #ffffffcc;
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      font-weight: 600;
-      z-index: 100;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
+	.navbar {
+	  background-color: #ffffffcc;
+	  backdrop-filter: blur(10px);
+	  position: sticky;
+	  top: 0;
+	  display: flex;
+	  justify-content: center;
+	  gap: 2rem;
+	  padding: 1rem;
+	  font-weight: 600;
+	  z-index: 100;
+	  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+	}
 
-    .navbar a {
-      color: #333;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+	.navbar a {
+	  color: #333;
+	  text-decoration: none;
+	  transition: color 0.2s;
+	}
 
-    .navbar a:hover {
-      color: #0077b5;
-    }
+	.navbar a:hover {
+	  color: #0077b5;
+	}
 
-    .section {
-      background-color: #ffffff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 800px;
-      width: 90%;
-      text-align: center;
-      animation: fadeIn 0.6s ease-out;
-    }
+	.section {
+	  background-color: #ffffff;
+	  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+	  border-radius: 12px;
+	  padding: 2rem;
+	  margin: 2rem auto;
+	  max-width: 800px;
+	  width: 90%;
+	  text-align: center;
+	  animation: fadeIn 0.6s ease-out;
+	}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+	h1 {
+	  font-size: 2.5rem;
+	  margin-bottom: 0.5rem;
+	}
 
-    .headshot {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+	.headshot {
+	  width: 140px;
+	  height: 140px;
+	  border-radius: 50%;
+	  object-fit: cover;
+	  margin-bottom: 1rem;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
 
-    .bio {
-      max-width: 600px;
-      font-size: 1.05rem;
-      color: #555;
-      margin: 0 auto;
-    }
+	.bio {
+	  max-width: 600px;
+	  font-size: 1.05rem;
+	  color: #555;
+	  margin: 0 auto;
+	}
 
-    iframe {
-      width: 100%;
-      max-width: 100%;
-      aspect-ratio: 16 / 9;
-      border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
+	iframe {
+	  width: 100%;
+	  max-width: 100%;
+	  aspect-ratio: 16 / 9;
+	  border: none;
+	  border-radius: 8px;
+	  margin-top: 1rem;
+	}
 
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
+	.socials {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 1rem;
+	  justify-content: center;
+	  margin-top: 1.5rem;
+	}
 
-    .socials a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: #eee;
-      color: #333;
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
+	.socials a {
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  width: 48px;
+	  height: 48px;
+	  border-radius: 50%;
+	  background-color: #eee;
+	  color: #333;
+	  font-size: 1.5rem;
+	  transition: all 0.3s ease;
+	  text-decoration: none;
+	}
 
-    .socials a img {
-      width: 24px;
-      height: 24px;
-    }
+	.socials a img {
+	  width: 24px;
+	  height: 24px;
+	}
 
-    .socials a:hover {
-      transform: scale(1.1);
-      color: #fff;
-    }
+	.socials a:hover {
+	  transform: scale(1.1);
+	  color: #fff;
+	}
 
-    .socials a[title="LinkedIn"]:hover {
-      background-color: #0077b5;
-    }
+	.socials a[title="LinkedIn"]:hover {
+	  background-color: #0077b5;
+	}
 
-    .socials a[title="Instagram"]:hover,
-    .socials a[title="Threads"]:hover {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    }
+	.socials a[title="Instagram"]:hover,
+	.socials a[title="Threads"]:hover {
+	  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+	}
 
-    .socials a[title="YouTube"]:hover {
-      background-color: #FF0000;
-    }
+	.socials a[title="YouTube"]:hover {
+	  background-color: #FF0000;
+	}
 
-    .socials a[title="TikTok"]:hover {
-      background-color: #000000;
-    }
+	.socials a[title="TikTok"]:hover {
+	  background-color: #000000;
+	}
 
-    footer {
-      text-align: center;
-      margin: 2rem 0;
-      font-size: 0.9rem;
-      color: #888;
-    }
+	footer {
+	  text-align: center;
+	  margin: 2rem 0;
+	  font-size: 0.9rem;
+	  color: #888;
+	}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+	@keyframes fadeIn {
+	  from { opacity: 0; transform: translateY(10px); }
+	  to { opacity: 1; transform: translateY(0); }
+	}
   </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <a href="#about">About</a>
-    <a href="#music">Music</a>
-    <a href="#contact">Contact</a>
+	<a href="#about">About</a>
+	<a href="#music">Music</a>
+	<a href="#contact">Contact</a>
   </nav>
 
   <section class="section" id="about">
-    <h1>Tom Zyer</h1>
-    <img src="headshot.jpg" alt="Tom Zyer Headshot" class="headshot" />
-    <p class="bio">
-      I’m Tom Zyer — a recent MBA graduate from Kellogg and product strategist with a passion for startups, music, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
-    </p>
+	<h1>Tom Zyer</h1>
+	<img src="headshot.jpg" alt="Tom Zyer Headshot" class="headshot" />
+	<p class="bio">
+	  I’m Tom Zyer — a recent MBA graduate from Kellogg and product strategist with a passion for startups, music, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
+	</p>
   </section>
 
   <section class="section" id="music">
-    <h2>Featured Performance</h2>
-    <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0" allowfullscreen></iframe>
+	<h2>Featured Performance</h2>
+	<iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0&vq=hd1080" allowfullscreen></iframe>
   </section>
 
   <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>📫 Reach me at <a href="mailto:hello@tomzyer.com">hello@tomzyer.com</a></p>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCiBqYUGWrTTgNlmMEO2v3Dw" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
+	<h2>Contact</h2>
+	<p>📫 Reach me at <a href="mailto:hello@tomzyer.com">hello@tomzyer.com</a></p>
+	<div class="socials">
+	  <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+	  <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+	  <a href="https://www.youtube.com//@tzyer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+	  <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+	</div>
   </section>
 
   <footer>
-    <p>© 2025 Tom Zyer</p>
+	<p>© 2025 Tom Zyer</p>
   </footer>
 </body>
 </html>
