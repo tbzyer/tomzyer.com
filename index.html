@@ -39,8 +39,27 @@
       border: none;
     }
 
+    .contact {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .socials a {
+      color: #333;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
     footer {
-      margin-top: 3rem;
+      margin: 3rem 0 1rem;
       font-size: 0.9rem;
       color: #888;
     }
@@ -53,6 +72,9 @@
       }
     }
   </style>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -61,6 +83,21 @@
   </header>
 
   <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0" allowfullscreen></iframe>
+
+  <div class="contact">
+    <p>📫 Contact me: <a href="mailto:hello@tomzyer.com">hello@tomzyer.com</a></p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCiBqYUGWrTTgNlmMEO2v3Dw" target="_blank" title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 Tom Zyer</p>
