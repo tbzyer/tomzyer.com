@@ -114,6 +114,30 @@
       font-size: 0.9rem;
       color: #888;
     }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -1rem ;
+      padding: 0 1rem 2rem;
+    }
+
+    .headshot {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .bio {
+      max-width: 600px;
+      font-size: 1.05rem;
+      color: #555;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -121,6 +145,13 @@
     <h1>Tom Zyer</h1>
     <p>Check out one of my recent music performances at Kellogg's Battle of the Bands.</p>
   </header>
+
+  <section class="about">
+    <img src="headshot.jpg" alt="Tom Zyer Headshot" class="headshot" />
+    <p class="bio">
+      I’m Tom Zyer — an MBA student at Kellogg, guitarist, and product strategist with a passion for music, startups, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
+    </p>
+  </section>
 
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0" allowfullscreen></iframe>
