@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tom Zyer – Music</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -32,10 +36,18 @@
       color: #444;
     }
 
+    .video-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
     iframe {
-      max-width: 100%;
-      width: 560px;
-      height: 315px;
+      width: 80vw;
+      max-width: 960px;
+      height: calc(80vw * 9 / 16);
+      max-height: 540px;
       border: none;
     }
 
@@ -67,13 +79,14 @@
       text-decoration: none;
     }
 
-    .socials a:hover {
-      color: #fff;
-    }
-
     .socials a img {
       width: 24px;
       height: 24px;
+    }
+
+    .socials a:hover {
+      transform: scale(1.1);
+      color: #fff;
     }
 
     .socials a[title="LinkedIn"]:hover {
@@ -81,7 +94,7 @@
     }
 
     .socials a[title="Instagram"]:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     }
 
     .socials a[title="YouTube"]:hover {
@@ -93,7 +106,7 @@
     }
 
     .socials a[title="Threads"]:hover {
-      background-color: #000;
+      background-color: #000000;
       filter: brightness(1.2);
     }
 
@@ -102,21 +115,7 @@
       font-size: 0.9rem;
       color: #888;
     }
-
-    @media (max-width: 600px) {
-      iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-      }
-    }
   </style>
-
- <!-- ✅ Fixed Font Awesome link -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
 </head>
 <body>
   <header>
@@ -124,25 +123,27 @@
     <p>Check out one of my recent music performances at Kellogg's Battle of the Bands.</p>
   </header>
 
-  <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0" allowfullscreen></iframe>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0" allowfullscreen></iframe>
+  </div>
 
   <div class="contact">
     <p>📫 Contact me: <a href="mailto:hello@tomzyer.com">hello@tomzyer.com</a></p>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn" rel="noopener noreferrer">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram">
+      <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram" rel="noopener noreferrer">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://www.youtube.com/@tzyer" target="_blank" title="YouTube">
+      <a href="https://www.youtube.com/channel/UCiBqYUGWrTTgNlmMEO2v3Dw" target="_blank" title="YouTube" rel="noopener noreferrer">
         <i class="fab fa-youtube"></i>
       </a>
-      <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok">
+      <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok" rel="noopener noreferrer">
         <i class="fab fa-tiktok"></i>
       </a>
-      <a href="https://www.threads.net/@tzyer" target="_blank" title="Threads">
-        <img src="threads-icon.png" alt="Threads" style="width: 24px; height: 24px;" />
+      <a href="https://www.threads.net/@tzyer" target="_blank" title="Threads" rel="noopener noreferrer">
+        <img src="threads-icon.png" alt="Threads" />
       </a>
     </div>
   </div>
