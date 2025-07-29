@@ -51,10 +51,12 @@
       color: #fff;
       box-shadow: none;
       border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 800px;
+      padding: 4rem 2rem; /* Increased vertical padding */
+      margin: 8rem auto;   /* Increased vertical margin */
+      max-width: 1600px;
       width: 90%;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
       animation: fadeIn 0.6s ease-out;
     }
@@ -81,8 +83,8 @@
     }
 
     iframe {
-      width: 100%;
-      max-width: 100%;
+      width: 90%;
+      max-width: 1600px; /* Increased from 1200px */
       aspect-ratio: 16 / 9;
       border: none;
       border-radius: 8px;
@@ -198,7 +200,7 @@
     .overlay-card .bio {
       font-size: 1.2rem;
       color: #ddd;
-      max-width: 700px;
+      max-width: 90vw;
       margin: 0 auto;
     }
   </style>
@@ -221,6 +223,7 @@
     </div>
   </div>
 
+  <div style="height: 800px;"></div>
   <section class="section" id="music">
     <h2>Watch the full Battle of the Bands Performance</h2>
     <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0&vq=hd1080" allowfullscreen></iframe>
