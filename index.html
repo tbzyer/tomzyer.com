@@ -12,239 +12,249 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
-	html, body {
-	  height: 100%;
-	}
-	body {
-	  font-family: 'Inter', sans-serif;
-	  background: linear-gradient(135deg, #f0f0f0, #ffffff);
-	  margin: 0;
-	  padding: 0;
-	}
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f0f0, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
 
-	.navbar {
-	  background-color: #ffffffcc;
-	  backdrop-filter: blur(10px);
-	  position: sticky;
-	  top: 0;
-	  display: flex;
-	  justify-content: center;
-	  gap: 2rem;
-	  padding: 1rem;
-	  font-weight: 600;
-	  z-index: 100;
-	  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-	}
+    .navbar {
+      background-color: #000;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      font-weight: 600;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
 
-	.navbar a {
-	  color: #333;
-	  text-decoration: none;
-	  transition: color 0.2s;
-	}
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-	.navbar a:hover {
-	  color: #0077b5;
-	}
+    .navbar a:hover {
+      color: #0077b5;
+    }
 
-	.section {
-	  background-color: rgba(0, 0, 0, 0.6);
-	  color: #fff;
-	  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-	  border-radius: 12px;
-	  padding: 2rem;
-	  margin: 2rem auto;
-	  max-width: 800px;
-	  width: 90%;
-	  text-align: center;
-	  animation: fadeIn 0.6s ease-out;
-	}
+    .section {
+      background-color: transparent;
+      color: #fff;
+      box-shadow: none;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      animation: fadeIn 0.6s ease-out;
+    }
 
-	h1 {
-	  font-size: 2.5rem;
-	  margin-bottom: 0.5rem;
-	}
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-	.headshot {
-	  width: 140px;
-	  height: 140px;
-	  border-radius: 50%;
-	  object-fit: cover;
-	  margin-bottom: 1rem;
-	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
+    .headshot {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-	.bio {
-	  max-width: 600px;
-	  font-size: 1.05rem;
-	  color: #555;
-	  margin: 0 auto;
-	}
+    .bio {
+      max-width: 600px;
+      font-size: 1.05rem;
+      color: #555;
+      margin: 0 auto;
+    }
 
-	iframe {
-	  width: 100%;
-	  max-width: 100%;
-	  aspect-ratio: 16 / 9;
-	  border: none;
-	  border-radius: 8px;
-	  margin-top: 1rem;
-	}
+    iframe {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
 
-	.socials {
-	  display: flex;
-	  flex-wrap: wrap;
-	  gap: 1rem;
-	  justify-content: center;
-	  margin-top: 1.5rem;
-	}
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
 
-	.socials a {
-	  display: inline-flex;
-	  align-items: center;
-	  justify-content: center;
-	  width: 48px;
-	  height: 48px;
-	  border-radius: 50%;
-	  background-color: #eee;
-	  color: #333;
-	  font-size: 1.5rem;
-	  transition: all 0.3s ease;
-	  text-decoration: none;
-	}
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #eee;
+      color: #333;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
 
-	.socials a img {
-	  width: 24px;
-	  height: 24px;
-	}
+    .socials a img {
+      width: 24px;
+      height: 24px;
+    }
 
-	.socials a:hover {
-	  transform: scale(1.1);
-	  color: #fff;
-	}
+    .socials a:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
 
-	.socials a[title="LinkedIn"]:hover {
-	  background-color: #0077b5;
-	}
+    .socials a[title="LinkedIn"]:hover {
+      background-color: #0077b5;
+    }
 
-	.socials a[title="Instagram"]:hover,
-	.socials a[title="Threads"]:hover {
-	  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-	}
+    .socials a[title="Instagram"]:hover,
+    .socials a[title="Threads"]:hover {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
 
-	.socials a[title="YouTube"]:hover {
-	  background-color: #FF0000;
-	}
+    .socials a[title="YouTube"]:hover {
+      background-color: #FF0000;
+    }
 
-	.socials a[title="TikTok"]:hover {
-	  background-color: #000000;
-	}
+    .socials a[title="TikTok"]:hover {
+      background-color: #000000;
+    }
 
-	footer {
-	  text-align: center;
-	  margin: 2rem 0;
-	  font-size: 0.9rem;
-	  color: #888;
-	  position: relative;
-	  z-index: 1;
-	}
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #888;
+      position: relative;
+      z-index: 1;
+    }
 
-	@keyframes fadeIn {
-	  from { opacity: 0; transform: translateY(10px); }
-	  to { opacity: 1; transform: translateY(0); }
-	}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-	.scroll-video-section video {
-	  width: 100%;
-	  max-width: 800px;
-	  display: block;
-	  margin: 1rem auto 0;
-	  border-radius: 12px;
-	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	}
+    .scroll-video-section video {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 1rem auto 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-	.scroll-video-background {
-	  position: relative;
-	  height: 100vh;
-	  width: 100%;
-	  overflow: hidden;
-	  margin-bottom: 0;
-	  padding-bottom: 0;
-	}
+    .scroll-video-background {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
-	.scroll-video-background video {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  min-width: 100%;
-	  min-height: 100%;
-	  object-fit: cover;
-	  z-index: -1;
-	}
+    .scroll-video-background video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-	.overlay-card {
-	  position: relative;
-	  max-width: 700px;
-	  margin: 20vh auto 0;
-	  background-color: rgba(0, 0, 0, 0.6);
-	  color: #fff;
-	  padding: 2rem;
-	  border-radius: 12px;
-	  text-align: center;
-	  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-	}
+    .overlay-card {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .overlay-card h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+    }
+
+    .overlay-card .bio {
+      font-size: 1.2rem;
+      color: #ddd;
+      max-width: 700px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
-	<a href="#about">About</a>
-	<a href="#music">Music</a>
-	<a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#music">Music</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <div class="scroll-video-background">
-	<video id="scrollVideo" src="scroll-performance.mp4" muted playsinline></video>
-	<div class="overlay-card">
-	  <h1>Tom Zyer</h1>
-	  <p class="bio">
-		I’m Tom Zyer — a recent MBA graduate from Kellogg and product strategist with a passion for startups, music, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
-	  </p>
-	</div>
+    <video id="scrollVideo" src="scroll-performance.mp4" muted playsinline></video>
+    <div class="overlay-card">
+      <h1>Tom Zyer</h1>
+      <p class="bio">
+        I’m Tom Zyer — a recent MBA graduate from Kellogg and product strategist with a passion for startups, music, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
+      </p>
+    </div>
   </div>
 
   <section class="section" id="music">
-	<h2>Watch the full Battle of the Bands Performance</h2>
-	<iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0&vq=hd1080" allowfullscreen></iframe>
+    <h2>Watch the full Battle of the Bands Performance</h2>
+    <iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0&vq=hd1080" allowfullscreen></iframe>
   </section>
 
   <footer style="background-color: #000; color: #fff; padding: 2rem 1rem;">
-	<h2>Contact</h2>
-	<p>Email me at <a href="mailto:hello@tomzyer.com" style="color: #fff; text-decoration: underline;">hello@tomzyer.com</a></p>
-	<div class="socials">
-	  <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-	  <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-	  <a href="https://www.youtube.com/@tzyer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-	  <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-	</div>
-	<p style="margin-top: 2rem;">© 2025 Tom Zyer</p>
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:hello@tomzyer.com" style="color: #fff; text-decoration: underline;">hello@tomzyer.com</a></p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@tzyer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p style="margin-top: 2rem;">© 2025 Tom Zyer</p>
   </footer>
 
   <script>
-	const scrollVideo = document.getElementById("scrollVideo");
+    const scrollVideo = document.getElementById("scrollVideo");
 
-	scrollVideo.addEventListener("loadedmetadata", () => {
-	  scrollVideo.pause();
+    scrollVideo.addEventListener("loadedmetadata", () => {
+      scrollVideo.pause();
 
-	  window.addEventListener("scroll", () => {
-		const scrollTop = window.scrollY;
-		const docHeight = document.body.scrollHeight - window.innerHeight;
-		const scrollFraction = scrollTop / docHeight;
-		const duration = scrollVideo.duration;
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollFraction = scrollTop / docHeight;
+        const duration = scrollVideo.duration;
 
-		if (!isNaN(duration)) {
-		  scrollVideo.currentTime = scrollFraction * duration;
-		}
-	  });
-	});
+        if (!isNaN(duration)) {
+          scrollVideo.currentTime = scrollFraction * duration;
+        }
+      });
+    });
   </script>
 </body>
 </html>
