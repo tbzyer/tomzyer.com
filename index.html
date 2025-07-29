@@ -200,6 +200,29 @@
       margin: 0 auto;
       font-weight: 400;
     }
+    /* Mobile-specific: ensure video background is visible and text fits */
+    @media (max-width: 768px) {
+      .scroll-video-background video {
+        object-position: center 30%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        display: block;
+      }
+
+      .overlay-card h1 {
+        font-size: 2rem;
+      }
+
+      .overlay-card .bio {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 <body>
