@@ -12,6 +12,9 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
+	html, body {
+	  height: 100%;
+	}
 	body {
 	  font-family: 'Inter', sans-serif;
 	  background: linear-gradient(135deg, #f0f0f0, #ffffff);
@@ -44,7 +47,8 @@
 	}
 
 	.section {
-	  background-color: #ffffff;
+	  background-color: rgba(0, 0, 0, 0.6);
+	  color: #fff;
 	  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 	  border-radius: 12px;
 	  padding: 2rem;
@@ -139,11 +143,53 @@
 	  margin: 2rem 0;
 	  font-size: 0.9rem;
 	  color: #888;
+	  position: relative;
+	  z-index: 1;
 	}
 
 	@keyframes fadeIn {
 	  from { opacity: 0; transform: translateY(10px); }
 	  to { opacity: 1; transform: translateY(0); }
+	}
+
+	.scroll-video-section video {
+	  width: 100%;
+	  max-width: 800px;
+	  display: block;
+	  margin: 1rem auto 0;
+	  border-radius: 12px;
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.scroll-video-background {
+	  position: relative;
+	  height: 100vh;
+	  width: 100%;
+	  overflow: hidden;
+	  margin-bottom: 0;
+	  padding-bottom: 0;
+	}
+
+	.scroll-video-background video {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	  object-fit: cover;
+	  z-index: -1;
+	}
+
+	.overlay-card {
+	  position: relative;
+	  max-width: 700px;
+	  margin: 20vh auto 0;
+	  background-color: rgba(0, 0, 0, 0.6);
+	  color: #fff;
+	  padding: 2rem;
+	  border-radius: 12px;
+	  text-align: center;
+	  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 	}
   </style>
 </head>
@@ -155,32 +201,50 @@
 	<a href="#contact">Contact</a>
   </nav>
 
-  <section class="section" id="about">
-	<h1>Tom Zyer</h1>
-	<img src="headshot.jpg" alt="Tom Zyer Headshot" class="headshot" />
-	<p class="bio">
-	  I’m Tom Zyer — a recent MBA graduate from Kellogg and product strategist with a passion for startups, music, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
-	</p>
-  </section>
+  <div class="scroll-video-background">
+	<video id="scrollVideo" src="scroll-performance.mp4" muted playsinline></video>
+	<div class="overlay-card">
+	  <h1>Tom Zyer</h1>
+	  <p class="bio">
+		I’m Tom Zyer — a recent MBA graduate from Kellogg and product strategist with a passion for startups, music, and creating things that connect people. Whether I’m on stage or in a spreadsheet, I love chasing ideas and building with energy.
+	  </p>
+	</div>
+  </div>
 
   <section class="section" id="music">
 	<h2>Featured Performance</h2>
 	<iframe src="https://www.youtube.com/embed/ZsVwipjGNj8?rel=0&vq=hd1080" allowfullscreen></iframe>
   </section>
 
-  <section class="section" id="contact">
+  <footer style="background-color: #000; color: #fff; padding: 2rem 1rem;">
 	<h2>Contact</h2>
-	<p>📫 Reach me at <a href="mailto:hello@tomzyer.com">hello@tomzyer.com</a></p>
+	<p>📫 Reach me at <a href="mailto:hello@tomzyer.com" style="color: #fff; text-decoration: underline;">hello@tomzyer.com</a></p>
 	<div class="socials">
 	  <a href="https://www.linkedin.com/in/tzyer/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 	  <a href="https://www.instagram.com/tzyer/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-	  <a href="https://www.youtube.com//@tzyer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+	  <a href="https://www.youtube.com/@tzyer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
 	  <a href="https://www.tiktok.com/@tomzyer" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
 	</div>
-  </section>
-
-  <footer>
-	<p>© 2025 Tom Zyer</p>
+	<p style="margin-top: 2rem;">© 2025 Tom Zyer</p>
   </footer>
+
+  <script>
+	const scrollVideo = document.getElementById("scrollVideo");
+
+	scrollVideo.addEventListener("loadedmetadata", () => {
+	  scrollVideo.pause();
+
+	  window.addEventListener("scroll", () => {
+		const scrollTop = window.scrollY;
+		const docHeight = document.body.scrollHeight - window.innerHeight;
+		const scrollFraction = scrollTop / docHeight;
+		const duration = scrollVideo.duration;
+
+		if (!isNaN(duration)) {
+		  scrollVideo.currentTime = scrollFraction * duration;
+		}
+	  });
+	});
+  </script>
 </body>
 </html>
